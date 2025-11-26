@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Republic Wing - Complete Technology Services & Developer's Hub</title>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="./style/tailwind.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZRJ5WR8nUmA_EUIW-SloB673kNdfPU1I&loading=async&callback=initMap">
+        </script>
+</head>
+
+<body onload="document.body.classList.add('js-loaded')">
+
+    <!-- Background -->
+    <div class="bg-mesh"></div>
+    <div class="glow-orb bg-purple-600/20 w-[300px] h-[300px] md:w-[600px] md:h-[600px] top-[-50px] left-[-50px]"></div>
+    <div class="glow-orb bg-blue-600/20 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bottom-0 right-0"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-nav">
+        <div class="container mx-auto px-4 md:px-6 py-3 md:py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <img src="./assets/rw.jpg" alt="Republic Wing"
+                        class="w-8 h-8 md:w-10 md:h-10 rounded-full shadow-lg shadow-purple-500/20 object-cover">
+                    <span class="text-lg md:text-xl font-bold tracking-tight text-white">Republic Wing</span>
+                </div>
+                <div class="hidden lg:flex items-center gap-8 text-sm text-gray-400 font-medium">
+                    <a href="#home" class="hover:text-white transition-colors">Home</a>
+                    <a href="#services" class="hover:text-white transition-colors">Services</a>
+                    <a href="#expertise" class="hover:text-white transition-colors">Expertise</a>
+                    <a href="#products" class="hover:text-white transition-colors">Products</a>
+                    <a href="#dev-hub" class="flex items-center gap-2 hover:text-white transition-colors group">
+                        Developer's Hub
+                        <span
+                            class="px-1.5 py-0.5 text-[9px] font-bold bg-purple-600 text-white rounded flex items-center gap-1 shadow-lg shadow-purple-500/40 animate-pulse">SOON</span>
+                    </a>
+                </div>
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="#feedback"
+                        class="text-sm font-semibold text-purple-400 hover:text-white transition-colors flex items-center gap-2"><i
+                            class="far fa-star"></i> Rate Us</a>
+                    <a href="#contact"
+                        class="btn-glow px-6 py-2.5 rounded-full text-sm font-bold text-white shadow-lg">Get Started</a>
+                </div>
+                <button id="mobile-menu-btn" class="lg:hidden text-white text-2xl focus:outline-none"><i
+                        class="fas fa-bars"></i></button>
+            </div>
+            <div id="mobile-menu" class="lg:hidden border-t border-white/10 mt-3 bg-black/50 rounded-xl">
+                <div class="flex flex-col p-4 gap-4 text-gray-300 text-sm">
+                    <a href="#home" class="hover:text-white py-2" onclick="toggleMobileMenu()">Home</a>
+                    <a href="#services" class="hover:text-white py-2" onclick="toggleMobileMenu()">Services</a>
+                    <a href="#expertise" class="hover:text-white py-2" onclick="toggleMobileMenu()">Expertise</a>
+                    <a href="#products" class="hover:text-white py-2" onclick="toggleMobileMenu()">Products</a>
+                    <a href="#dev-hub" class="hover:text-white py-2 flex items-center gap-2"
+                        onclick="toggleMobileMenu()">Developer's Hub <span
+                            class="text-[9px] bg-purple-600 text-white px-1.5 rounded">SOON</span></a>
+                    <a href="#feedback" class="hover:text-white py-2" onclick="toggleMobileMenu()">Rate Us</a>
+                    <a href="#contact" class="btn-glow text-center py-3 rounded-lg text-white font-bold mt-2"
+                        onclick="toggleMobileMenu()">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Announcement Bar -->
+    <div
+        class="fixed top-[60px] md:top-[72px] w-full z-40 bg-purple-900/80 backdrop-blur-md border-y border-white/5 overflow-hidden py-1.5">
+        <div
+            class="animate-marquee whitespace-nowrap flex items-center gap-10 md:gap-20 text-[9px] md:text-[10px] font-bold tracking-widest uppercase text-purple-100">
+            <span class="flex items-center"><i class="fas fa-bolt text-yellow-400 mr-2"></i> READY TO DOMINATE - 30%
+                OFF!</span>
+            <span class="flex items-center"><i class="fas fa-rocket text-blue-400 mr-2"></i> Developer's Hub Coming
+                Soon</span>
+            <span class="flex items-center"><i class="fas fa-gift text-pink-400 mr-2"></i> Free Consultation</span>
+            <span class="flex items-center"><i class="fas fa-bolt text-yellow-400 mr-2"></i> READY TO DOMINATE - 30%
+                OFF!</span>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-32 pb-12 md:pb-20 flex flex-col justify-center relative overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col lg:flex-row items-center grow">
+            <div class="w-full lg:w-1/2 z-10 mb-12 lg:mb-0 reveal text-center lg:text-left">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/30 bg-purple-500/10 text-purple-300 text-[10px] md:text-xs font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span> READY TO DOMINATE
+                </div>
+                <h1 class="text-4xl md:text-5xl lg:text-7xl font-bold leading-tight mb-6 uppercase">READY TO <span
+                        class="text-gradient-accent">DOMINATE</span><br> THE FUTURE?</h1>
+                <p
+                    class="text-base md:text-xl text-gray-400 font-light mb-8 md:mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                    From web development to smart products, we provide the tools you need to dominate your industry.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact"
+                        class="btn-glow px-8 py-4 rounded-xl text-white font-bold text-center flex items-center justify-center gap-2 group">
+                        Start Dominating <i
+                            class="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                    <button
+                        class="px-8 py-4 rounded-xl border border-white/10 hover:bg-white/5 text-white font-semibold transition-all flex items-center justify-center gap-2">
+                        <i class="fas fa-play-circle text-gray-400"></i> Our Vision
+                    </button>
+                </div>
+            </div>
+            <div class="w-full lg:w-1/2 flex justify-center items-center relative reveal-right mt-8 lg:mt-0">
+                <div class="orbit-wrapper">
+                    <div class="orbit-container">
+                        <div
+                            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-24 h-24 md:w-32 md:h-32 bg-black rounded-full border border-purple-500/30 shadow-[0_0_50px_rgba(139,92,246,0.3)] flex items-center justify-center z-10">
+                            <div class="text-center">
+                                <img src="./assets/rw.jpg" alt="" class="w-full rounded-full">
+                            </div>
+                        </div>
+                        <div class="orbit-ring w-[200px] h-[200px] md:w-[280px] md:h-[280px] border-purple-500/20">
+                        </div>
+                        <div class="planet" style="animation-duration: 20s;">
+                            <div class="planet-icon text-blue-400"
+                                style="top: 0; left: 50%; transform: translate(-50%, -50%); animation-duration: 20s;"><i
+                                    class="fas fa-code"></i></div>
+                        </div>
+                        <div class="orbit-ring w-[320px] h-80 md:w-[450px] md:h-[450px] border-blue-500/10"></div>
+                        <div class="planet" style="animation-duration: 35s; animation-direction: reverse;">
+                            <div class="planet-icon text-pink-400"
+                                style="top: 50%; left: 100%; transform: translate(-50%, -50%); animation-duration: 35s; animation-direction: normal;">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="planet-icon text-green-400"
+                                style="top: 50%; left: 0%; transform: translate(-50%, -50%); animation-duration: 35s; animation-direction: normal;">
+                                <i class="fa-solid fa-shield"></i>
+                            </div>
+                            <div class="planet-icon text-purple-400"
+                                style="top: 14%; left: 14%; transform: translate(-50%, -50%); animation-duration: 35s; animation-direction: normal;">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Marquee Section -->
+        <div
+            class="mt-8 border-t border-white/5 bg-black/40 backdrop-blur-sm py-4 md:py-6 overflow-hidden w-full reveal">
+            <p class="text-[9px] md:text-[10px] font-bold text-purple-400 tracking-[0.2em] text-center mb-4 uppercase">
+                Partners & Owned Brands (Launching Soon)</p>
+            <div class="relative w-full overflow-hidden">
+                <div
+                    class="absolute left-0 top-0 bottom-0 w-10 md:w-20 bg-linear-to-r from-[#050505] to-transparent z-10">
+                </div>
+                <div
+                    class="absolute right-0 top-0 bottom-0 w-10 md:w-20 bg-linear-to-l from-[#050505] to-transparent z-10">
+                </div>
+                <div class="animate-marquee">
+                    <div class="marquee-item"><i class="fas fa-shield-virus text-green-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">HULO</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">Cybersecurity</span>
+                        </div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-balance-scale text-yellow-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">LEGAL WING</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">Legal
+                                Firm</span></div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-shopping-cart text-blue-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">NATIONAL CART</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">E-Commerce</span>
+                        </div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-globe-americas text-indigo-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">REPUBLIC CART</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">Intl.
+                                E-Commerce</span></div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-store text-orange-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">MANNA FOOD CENTRE</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">Retail
+                                Partner</span></div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-chart-line text-pink-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">FINTECH WING</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">FinTech</span>
+                        </div>
+                    </div>
+                    <!-- Duplicates -->
+                    <div class="marquee-item"><i class="fas fa-shield-virus text-green-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">HULO</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">Cybersecurity</span>
+                        </div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-balance-scale text-yellow-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">LEGAL WING</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">Legal
+                                Firm</span></div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-shopping-cart text-blue-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">NATIONAL CART</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">E-Commerce</span>
+                        </div>
+                    </div>
+                    <div class="marquee-item"><i class="fas fa-globe-americas text-indigo-400 text-xl"></i>
+                        <div><span class="block font-bold text-sm md:text-lg">REPUBLIC CART</span><span
+                                class="text-[9px] md:text-[10px] text-gray-400 uppercase tracking-wide">Intl.
+                                E-Commerce</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Digital Services (Active) -->
+    <section id="services" class="py-12 md:py-20 relative">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12 reveal">
+                <h2 class="text-xs md:text-sm font-bold text-purple-400 tracking-widest uppercase mb-2">Our Expertise
+                </h2>
+                <h3 class="text-2xl md:text-3xl lg:text-5xl font-bold text-white uppercase">Services Built for
+                    Domination</h3>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6 md:p-8 rounded-3xl relative group overflow-hidden reveal reveal-delay-100">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"><i
+                            class="fas fa-laptop-code text-6xl"></i></div>
+                    <div
+                        class="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 mb-6 text-xl">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Web Development</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Custom websites and PWAs built with
+                        cutting-edge technologies. Responsive, fast, and scalable.</p>
+                </div>
+                <div class="glass-card p-6 md:p-8 rounded-3xl relative group overflow-hidden reveal reveal-delay-200">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"><i
+                            class="fas fa-mobile text-6xl"></i></div>
+                    <div
+                        class="w-12 h-12 rounded-xl bg-purple-500/20 flex items-center justify-center text-purple-400 mb-6 text-xl">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">App Development</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Native and cross-platform mobile apps for iOS
+                        and Android with seamless user experiences.</p>
+                </div>
+                <div class="glass-card p-6 md:p-8 rounded-3xl relative group overflow-hidden reveal reveal-delay-300">
+                    <div class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"><i
+                            class="fas fa-paint-brush text-6xl"></i></div>
+                    <div
+                        class="w-12 h-12 rounded-xl bg-pink-500/20 flex items-center justify-center text-pink-400 mb-6 text-xl">
+                        <i class="fas fa-pen-nib"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-3">Design Services</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">Creative branding and visual identity. We
+                        craft designs that tell your brand's story.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Expertise Section (REDESIGNED LAYOUT: 2 Rows) -->
+    <section id="expertise" class="py-16 md:py-24 relative">
+        <div class="absolute inset-0 z-0 opacity-20 pointer-events-none"
+            style="background-image: linear-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(139, 92, 246, 0.1) 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-xs md:text-sm font-bold text-blue-400 tracking-[0.3em] uppercase mb-3">OUR EXPERTISE
+                </h2>
+                <h3 class="text-3xl md:text-5xl font-black text-white mb-8 tracking-tight uppercase">The Engine of
+                    Domination</h3>
+                <div
+                    class="inline-flex items-center gap-4 px-6 py-3 rounded-lg border border-green-500/40 bg-green-900/10 backdrop-blur-md shadow-[0_0_30px_rgba(34,197,94,0.15)] group hover:shadow-[0_0_50px_rgba(34,197,94,0.3)] transition-all duration-500 cursor-default">
+                    <div class="w-2 h-2 rounded-full bg-green-500 animate-ping"></div>
+                    <div class="flex flex-col items-start text-left">
+                        <span
+                            class="text-[9px] text-green-400 uppercase tracking-widest font-bold leading-none mb-1">Security
+                            Protocol</span>
+                        <span class="text-sm text-white font-bold tracking-wide flex items-center gap-2"><i
+                                class="fas fa-shield-alt text-green-500"></i> COLLABORATED BY HULO</span>
+                    </div>
+                    <div class="w-px h-8 bg-green-500/30 mx-2"></div>
+                    <i
+                        class="fas fa-fingerprint text-2xl text-green-500/50 group-hover:text-green-400 transition-colors"></i>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
+                <div
+                    class="lg:col-span-2 group relative p-1 rounded-2xl bg-linear-to-b from-blue-500/50 to-transparent reveal reveal-delay-100 hover:shadow-[0_0_40px_rgba(59,130,246,0.2)] transition-all duration-500">
+                    <div
+                        class="absolute inset-0 bg-blue-500/10 blur-xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="glass-card h-full min-h-[300px] p-8 md:p-10 rounded-xl bg-[#0a0a12] relative z-10 border border-blue-500/20 group-hover:border-blue-500/50 flex flex-col justify-center">
+                        <div class="flex items-center gap-4 mb-8 border-b border-blue-500/20 pb-4">
+                            <div
+                                class="w-14 h-14 rounded-xl bg-blue-500/20 flex items-center justify-center text-blue-400 text-2xl shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-2xl font-bold text-white">Architect & Build</h4>
+                                <p class="text-xs text-blue-300 font-mono uppercase tracking-widest">Development Core
+                                </p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-3 justify-center">
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="fas fa-pen-nib text-pink-500"></i> UI/UX Design
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-figma-plain text-purple-400"></i> Figma
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-javascript-plain text-yellow-400"></i> JavaScript
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-php-plain text-purple-400"></i> PHP
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-react-original text-blue-400"></i> React
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-nextjs-plain text-white"></i> Next.JS
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-nodejs-plain text-green-400"></i> Node.js
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-python-plain text-yellow-300"></i> Python
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-c-plain text-blue-500"></i> C
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-cplusplus-plain text-blue-500"></i> C++
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-amazonwebservices-plain-wordmark text-orange-400"></i> AWS
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-docker-plain text-blue-500"></i> Docker
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-kubernetes-plain text-blue-600"></i> Kubernetes
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-postgresql-plain text-blue-300"></i> PostgreSQL
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-mysql-plain text-blue-500"></i> MySQL
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-nginx-original text-green-500"></i> Nginx
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-kotlin-plain text-purple-500"></i> Kotlin
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-blue-500/20 hover:bg-blue-500/20 hover:border-blue-500">
+                                <i class="devicon-swift-plain text-orange-500"></i> Swift
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative p-1 rounded-2xl bg-linear-to-b from-red-600/50 to-transparent reveal reveal-delay-200 hover:shadow-[0_0_40px_rgba(220,38,38,0.3)] transition-all duration-500">
+                    <div
+                        class="absolute inset-0 bg-red-600/10 blur-xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="glass-card h-full p-8 rounded-xl bg-[#120a0a] relative z-10 border border-red-600/20 group-hover:border-red-600/50">
+                        <div class="flex items-center gap-4 mb-6 border-b border-red-600/20 pb-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-red-600/20 flex items-center justify-center text-red-500 text-xl shadow-[0_0_15px_rgba(220,38,38,0.3)] animate-pulse">
+                                <i class="fas fa-dragon"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Red Team Ops</h4>
+                                <p class="text-xs text-red-400 font-mono uppercase">Offensive Security</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5 justify-center">
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="fas fa-bug text-red-500"></i> Pentesting
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="fas fa-user-secret text-red-500"></i> Red Teaming
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="fas fa-bomb text-red-500"></i> Exploits
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="fas fa-database text-red-500"></i> SQLi
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="fas fa-user-friends text-red-500"></i> Social Eng.
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="fas fa-eye text-red-500"></i> OSINT
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="devicon-bash-plain text-white"></i> Bash/Shell
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-red-600/20 hover:bg-red-600/20 hover:border-red-600">
+                                <i class="devicon-rust-plain text-white"></i> Rust
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="group relative p-1 rounded-2xl bg-linear-to-b from-green-500/50 to-transparent reveal reveal-delay-300 hover:shadow-[0_0_40px_rgba(34,197,94,0.2)] transition-all duration-500">
+                    <div
+                        class="absolute inset-0 bg-green-500/10 blur-xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                    </div>
+                    <div
+                        class="glass-card h-full p-8 rounded-xl bg-[#0a120a] relative z-10 border border-green-500/20 group-hover:border-green-500/50">
+                        <div class="flex items-center gap-4 mb-6 border-b border-green-500/20 pb-4">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center text-green-400 text-xl shadow-[0_0_15px_rgba(34,197,94,0.3)]">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Blue Team Defense</h4>
+                                <p class="text-xs text-green-400 font-mono uppercase">Defensive Security</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2.5 justify-center">
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="fas fa-infinity text-green-500"></i> DevSecOps
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="fas fa-crosshairs text-green-500"></i> Threat Hunt
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="fas fa-fire-alt text-green-500"></i> Firewalls
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="fas fa-user-shield text-green-500"></i> Blue Team
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="fas fa-dungeon text-green-500"></i> Hardening
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="fas fa-first-aid text-green-500"></i> Incident Resp.
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="fas fa-network-wired text-green-500"></i> Networks
+                            </div>
+                            <div
+                                class="tech-chip group/chip border-green-500/20 hover:bg-green-500/20 hover:border-green-500">
+                                <i class="devicon-linux-plain text-white"></i> Linux
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <style>
+            .tech-chip {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                padding: 0.4rem 0.8rem;
+                border-radius: 6px;
+                background: rgba(255, 255, 255, 0.03);
+                border-width: 1px;
+                border-style: solid;
+                font-size: 0.75rem;
+                font-weight: 600;
+                color: #e5e7eb;
+                transition: all 0.3s ease;
+                cursor: default;
+                font-family: 'Plus Jakarta Sans', sans-serif;
+            }
+
+            .tech-chip:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+            #fireCanvas {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                pointer-events: none;
+            }
+        </style>
+    </section>
+
+    <!-- Future Products (Launching Soon) -->
+    <section id="products" class="py-12 md:py-20 relative overflow-hidden">
+        <div
+            class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-blue-600/10 blur-[100px] rounded-full z-[-1]">
+        </div>
+        <div class="container mx-auto px-4 md:px-6">
+            <div
+                class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 reveal text-center md:text-left gap-4">
+                <div>
+                    <h2 class="text-xs md:text-sm font-bold text-blue-400 tracking-widest uppercase mb-2">Innovation Hub
+                    </h2>
+                    <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white">Future Products <span
+                            class="text-xs md:text-sm align-middle bg-blue-600/20 text-blue-300 px-2 py-1 rounded-lg ml-2 border border-blue-500/30 whitespace-nowrap">Launching
+                            Soon</span></h3>
+                </div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-2xl text-center group hover:bg-white/10 reveal reveal-delay-100">
+                    <div
+                        class="w-16 h-16 mx-auto bg-linear-to-br from-gray-800 to-black rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-bullhorn text-2xl text-orange-400"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Digital Marketing</h4>
+                    <p class="text-xs text-gray-500">SEO, PPC, and Social Media campaigns.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group hover:bg-white/10 reveal reveal-delay-200">
+                    <div
+                        class="w-16 h-16 mx-auto bg-linear-to-br from-gray-800 to-black rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-server text-2xl text-green-400"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Website Hosting</h4>
+                    <p class="text-xs text-gray-500">Secure, high-performance cloud infrastructure.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group hover:bg-white/10 reveal reveal-delay-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-linear-to-br from-gray-800 to-black rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-gavel text-2xl text-red-400"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Legal Services</h4>
+                    <p class="text-xs text-gray-500">Tech-focused legal consultation.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group hover:bg-white/10 reveal reveal-delay-100">
+                    <div
+                        class="w-16 h-16 mx-auto bg-linear-to-br from-gray-800 to-black rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-podcast text-2xl text-gray-300"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Smart Speakers</h4>
+                    <p class="text-xs text-gray-500">High-fidelity audio with AI.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group hover:bg-white/10 reveal reveal-delay-200">
+                    <div
+                        class="w-16 h-16 mx-auto bg-linear-to-br from-gray-800 to-black rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-video text-2xl text-gray-300"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">CCTV Systems</h4>
+                    <p class="text-xs text-gray-500">Advanced surveillance solutions.</p>
+                </div>
+                <div class="glass-card p-6 rounded-2xl text-center group hover:bg-white/10 reveal reveal-delay-300">
+                    <div
+                        class="w-16 h-16 mx-auto bg-linear-to-br from-gray-800 to-black rounded-full flex items-center justify-center mb-4 shadow-lg group-hover:scale-110 transition-transform">
+                        <i class="fas fa-lightbulb text-2xl text-gray-300"></i>
+                    </div>
+                    <h4 class="font-bold mb-1">Smart Lighting</h4>
+                    <p class="text-xs text-gray-500">App-controlled lighting systems.</p>
+                </div>
+            </div>
+            <div
+                class="mt-8 glass-card rounded-2xl p-8 flex flex-col md:flex-row items-center justify-between bg-linear-to-r from-indigo-900/40 to-purple-900/40 border border-indigo-500/30 reveal">
+                <div class="flex items-center gap-6 mb-6 md:mb-0">
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 text-2xl animate-bounce">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold text-yellow-400 uppercase tracking-wider mb-1">Coming Soon</div>
+                        <h4 class="text-2xl font-bold">Republic Chatting App</h4>
+                        <p class="text-sm text-gray-300">Secure, fast, and revolutionary messaging.</p>
+                    </div>
+                </div>
+                <button
+                    class="px-6 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white text-sm font-bold transition-all">Get
+                    Notified</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Developer's Hub -->
+    <section id="dev-hub" class="py-12 md:py-24 relative bg-black/30">
+        <div class="absolute inset-0 bg-linear-to-b from-transparent via-purple-900/10 to-transparent"></div>
+        <div class="container mx-auto px-4 md:px-6 relative">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+                <div class="w-full lg:w-1/2 reveal-left text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-pink-500/30 bg-pink-500/10 text-pink-300 text-[10px] font-semibold mb-6">
+                        <i class="fas fa-rocket"></i> LAUNCHING SOON
+                    </div>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">Developer's Hub <br> <span
+                            class="text-gradient-accent">A Marketplace for Digital Solutions</span></h2>
+                    <p class="text-gray-300 text-base md:text-lg mb-6 leading-relaxed">Developer's Hub is the tech
+                        e‑commerce division of Republic Wing, designed as a one‑stop marketplace for digital products
+                        and services.</p>
+                    <div class="glass-card p-6 rounded-xl border-l-4 border-purple-500 mb-8 text-left">
+                        <h4 class="text-lg font-bold text-white mb-2"><i
+                                class="fas fa-users text-purple-400 mr-2"></i>Collaborative Marketplace</h4>
+                        <p class="text-sm text-gray-400">Sell your own digital products and services on our hub.</p>
+                    </div>
+                </div>
+                <div class="w-full lg:w-1/2 flex justify-center reveal-right">
+                    <div class="market-scene">
+                        <div class="market-platform"></div>
+                        <div class="market-item" style="top: 40%; left: 20%;">
+                            <div class="item-card"><i class="fas fa-shopping-cart text-2xl text-blue-400 mb-1"></i><span
+                                    class="text-[8px] font-bold text-gray-400">STORE</span></div>
+                        </div>
+                        <div class="market-item" style="top: 30%; left: 60%; animation-delay: 1s;">
+                            <div class="item-card border-purple-500/40"><i
+                                    class="fas fa-code text-2xl text-purple-400 mb-1"></i><span
+                                    class="text-[8px] font-bold text-gray-400">CODE</span></div>
+                        </div>
+                        <div class="market-item" style="top: 60%; left: 50%; animation-delay: 2s;">
+                            <div class="item-card border-pink-500/40"><i
+                                    class="fas fa-paint-brush text-2xl text-pink-400 mb-1"></i><span
+                                    class="text-[8px] font-bold text-gray-400">DESIGN</span></div>
+                        </div>
+                        <div class="market-item" style="top: 20%; left: 40%; animation-delay: 3s;">
+                            <div class="item-card border-green-500/40"><i
+                                    class="fas fa-shield-alt text-2xl text-green-400 mb-1"></i><span
+                                    class="text-[8px] font-bold text-gray-400">SECURE</span></div>
+                        </div>
+                        <div class="absolute top-[45%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 z-10">
+                            <div
+                                class="w-20 h-20 rounded-full bg-black border border-white/20 flex items-center justify-center shadow-[0_0_40px_rgba(139,92,246,0.5)] animate-bounce">
+                                <i class="fas fa-network-wired text-3xl text-white"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Why Choose Republic Wing? (MOVED HERE - Above Feedback) -->
+    <section id="why-us" class="py-20 relative bg-black overflow-hidden">
+        <canvas id="fireCanvas"></canvas>
+        <div class="absolute inset-0 bg-linear-to-b from-black/80 via-transparent to-black/80 z-10"></div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-20">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-xs md:text-sm font-bold text-orange-500 tracking-[0.3em] uppercase mb-3">The Republic
+                    Advantage</h2>
+                <h3
+                    class="text-3xl md:text-5xl font-black text-transparent bg-clip-text bg-linear-to-r from-yellow-400 via-orange-500 to-red-600 mb-6 tracking-tight uppercase">
+                    Why Choose Republic Wing?</h3>
+                <p class="text-xl text-gray-300 font-light">Because You Are <span class="font-bold text-white">READY TO
+                        DOMINATE</span>.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- Card 1: Certified Developers -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-4 border-yellow-500 reveal reveal-delay-100 group hover:bg-yellow-900/10">
+                    <div
+                        class="w-16 h-16 rounded-xl bg-yellow-500/20 flex items-center justify-center text-yellow-400 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 uppercase">Certified Developers</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Expertise you can trust. Our team consists of
+                        elite, certified professionals dedicated to building your vision with precision.</p>
+                </div>
+
+                <!-- Card 2: Milestonewise Payment -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-4 border-orange-500 reveal reveal-delay-200 group hover:bg-orange-900/10">
+                    <div
+                        class="w-16 h-16 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 uppercase">Milestone-wise Payment</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">Pay as you grow. Our transparent milestone-based
+                        payment structure ensures you only pay for progress delivered.</p>
+                </div>
+
+                <!-- Card 3: Free Service on Missed Deadline -->
+                <div
+                    class="glass-card p-8 rounded-2xl border-l-4 border-red-500 reveal reveal-delay-300 group hover:bg-red-900/10">
+                    <div
+                        class="w-16 h-16 rounded-xl bg-red-500/20 flex items-center justify-center text-red-400 text-3xl mb-6 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-stopwatch"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-white mb-3 uppercase">Free Service on Delay</h4>
+                    <p class="text-gray-400 text-sm leading-relaxed">We value your time. If we miss a deadline, we
+                        provide free service as a commitment to our domination guarantee.</p>
+                </div>
+            </div>
+
+            <!-- Bonus Features Banner -->
+            <div class="glass-card p-8 rounded-2xl border border-white/10 reveal reveal-delay-300">
+                <h4
+                    class="text-center text-lg font-bold text-white mb-6 uppercase tracking-widest border-b border-white/10 pb-4">
+                    Included In All Services</h4>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-server text-green-400 text-2xl mb-1"></i>
+                        <span class="text-white font-bold">1 Year Free Web Hosting</span>
+                        <span class="text-xs text-gray-400">Up to 10GB per User</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-envelope text-blue-400 text-2xl mb-1"></i>
+                        <span class="text-white font-bold">Free Mail Server</span>
+                        <span class="text-xs text-gray-400">Lifetime Access</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2">
+                        <i class="fas fa-headset text-purple-400 text-2xl mb-1"></i>
+                        <span class="text-white font-bold">24/7 Customer Support</span>
+                        <span class="text-xs text-gray-400">Always here for you</span>
+                    </div>
+                </div>
+                <div class="text-center mt-6">
+                    <p class="text-[10px] text-gray-500 italic">* Terms and Conditions Applied</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback & Reviews -->
+    <section id="feedback" class="py-12 md:py-20 relative">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="glass-card p-6 md:p-12 rounded-3xl relative overflow-hidden reveal-scale">
+                <div class="relative z-10 flex flex-col lg:flex-row gap-12 items-center">
+                    <div class="w-full lg:w-1/3 text-center lg:text-left">
+                        <h2 class="text-2xl md:text-3xl font-bold mb-4">We Value Your Voice</h2>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">Your feedback helps us build the future.
+                        </p>
+                    </div>
+                    <div class="w-full lg:w-2/3">
+                        <form id="feedbackForm" class="space-y-6 transition-opacity duration-500 ease-in-out">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Name
+                                        (Optional)</label><input type="text" name="feedback_name"
+                                        class="glass-input w-full rounded-xl px-4 py-3 text-sm" placeholder="Your Name">
+                                </div>
+                                <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Service
+                                        Code (Optional)</label><input type="text" name="service_code"
+                                        class="glass-input w-full rounded-xl px-4 py-3 text-sm"
+                                        placeholder="e.g. WEB-123"></div>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div id="serviceRatingBox"
+                                    class="bg-white/5 rounded-2xl p-4 border border-white/10 text-center transition-colors duration-300">
+                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-3">Rate Service
+                                        <span class="text-pink-500">*</span></label>
+                                    <div class="flex justify-center gap-2 text-2xl text-gray-600 hover:text-yellow-400 transition-colors cursor-pointer star-rating"
+                                        data-target="service-rating"><i class="far fa-star" data-value="1"></i><i
+                                            class="far fa-star" data-value="2"></i><i class="far fa-star"
+                                            data-value="3"></i><i class="far fa-star" data-value="4"></i><i
+                                            class="far fa-star" data-value="5"></i></div>
+                                    <input type="hidden" name="service_rating" id="service-rating" required>
+                                </div>
+                                <div id="designRatingBox"
+                                    class="bg-white/5 rounded-2xl p-4 border border-white/10 text-center transition-colors duration-300">
+                                    <label class="block text-xs font-bold text-gray-400 uppercase mb-3">Rate Design
+                                        <span class="text-pink-500">*</span></label>
+                                    <div class="flex justify-center gap-2 text-2xl text-gray-600 hover:text-yellow-400 transition-colors cursor-pointer star-rating"
+                                        data-target="design-rating"><i class="far fa-star" data-value="1"></i><i
+                                            class="far fa-star" data-value="2"></i><i class="far fa-star"
+                                            data-value="3"></i><i class="far fa-star" data-value="4"></i><i
+                                            class="far fa-star" data-value="5"></i></div>
+                                    <input type="hidden" name="design_rating" id="design-rating" required>
+                                </div>
+                            </div>
+                            <div class="relative">
+                                <textarea id="feedbackText"
+                                    class="glass-input w-full rounded-xl px-4 py-4 text-sm h-32 resize-none focus:ring-2 focus:ring-purple-500/50 transition-all duration-300"
+                                    placeholder="How can we improve? Share your thoughts... *" required
+                                    style="margin: 0;"></textarea>
+                                <button type="submit" id="feedbackBtn"
+                                    class="btn-glow px-6 py-2 rounded-lg text-xs font-bold text-white shadow-lg hover:shadow-purple-500/50 transition-all duration-300"
+                                    style="position: absolute; bottom: 16px; right: 10px;">SUBMIT
+                                    FEEDBACK</button>
+                            </div>
+                        </form>
+
+                        <!-- Success Animation (Heart) -->
+                        <div id="feedbackSuccess"
+                            class="hidden opacity-0 text-center py-12 transition-opacity duration-500 ease-in-out">
+                            <div class="heart-container">
+                                <svg class="heart-svg" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+                                </svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Thank You!</h3>
+                            <p class="text-gray-400 mb-6">We love your feedback.</p>
+                            <button onclick="resetFeedbackForm()"
+                                class="px-6 py-2 rounded-full border border-white/20 hover:bg-white/10 text-sm transition-colors">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- User Reviews -->
+    <section id="reviews" class="py-10 relative overflow-hidden reveal">
+        <div class="container mx-auto px-6 text-center mb-8">
+            <h2 class="text-2xl font-bold text-white mb-2">Client Reviews</h2>
+        </div>
+        <div class="relative w-full overflow-hidden">
+            <div class="animate-marquee-slow pause-on-hover flex items-center">
+                <div class="glass-card w-72 md:w-80 p-6 rounded-xl mx-4 shrink-0 flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gray-600/30 flex items-center justify-center text-gray-400">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Unknown User</h4>
+                            <div class="text-xs text-yellow-400"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 italic">"Professional and fast. Highly recommended!"</p>
+                </div>
+                <div class="glass-card w-72 md:w-80 p-6 rounded-xl mx-4 shrink-0 flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold">
+                            AS</div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Anita Singh</h4>
+                            <div class="text-xs text-yellow-400"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star-half-alt"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 italic">"Great service for app development."</p>
+                </div>
+                <!-- More items as needed for loop -->
+                <div class="glass-card w-72 md:w-80 p-6 rounded-xl mx-4 shrink-0 flex flex-col gap-3">
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gray-600/30 flex items-center justify-center text-gray-400">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-sm font-bold text-white">Unknown User</h4>
+                            <div class="text-xs text-yellow-400"><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                    class="fas fa-star"></i></div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-400 italic">"Excellent design work."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-12 md:py-20 relative">
+        <div class="container mx-auto px-4 md:px-6 flex flex-col md:flex-row gap-12">
+            <div class="w-full md:w-5/12 reveal-left">
+                <h2 class="text-sm font-bold text-pink-400 tracking-widest uppercase mb-2">Get In Touch</h2>
+                <h3 class="text-4xl font-bold text-white mb-8">Let's Build Something <br> Amazing Together.</h3>
+                <div class="space-y-6 mb-10">
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-pink-500 shrink-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Headquarters</h5>
+                            <p class="text-gray-400 text-sm">1st floor, Manna Food Centre, Padmapukur, Sherpur-Magrahat
+                                Road, Diamond Harbour, West Bengal, India, 743609</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-pink-500 shrink-0">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Phone</h5>
+                            <p class="text-gray-400 text-sm">9339474359, 95930 35680, 70292 28114</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-pink-500 shrink-0">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-white">Email</h5>
+                            <p class="text-gray-400 text-sm">
+                                care@republicwing.com<br>wing-of-technology@republicwing.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container flex items-center justify-center group relative cursor-pointer" id="mapper">
+                </div>
+            </div>
+            <div class="w-full md:w-7/12 reveal-right">
+                <div class="glass-card p-6 md:p-10 rounded-3xl relative min-h-[600px] flex flex-col justify-center">
+                    <form id="contactForm" class="space-y-6 transition-opacity duration-500 ease-in-out">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Full
+                                    Name</label><input type="text" required
+                                    class="glass-input w-full rounded-xl px-4 py-3 text-sm" placeholder="John Doe"
+                                    name="name">
+                            </div>
+                            <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Mobile
+                                    Number</label>
+                                <div class="flex gap-3"><input type="text"
+                                        class="glass-input w-20 rounded-xl px-2 py-3 text-sm text-center border border-white/10"
+                                        placeholder="+91" name="country"><input type="tel" required pattern="[0-9]*"
+                                        inputmode="numeric" class="glass-input w-full rounded-xl px-4 py-3 text-sm"
+                                        placeholder="98765 43210"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '')" name="phone"></div>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-xs font-bold text-gray-400 uppercase">Email Address <span
+                                        class="text-pink-500">*</span></label>
+                                <div class="flex gap-2">
+                                    <input type="email" id="contactEmail" required
+                                        class="glass-input w-full rounded-xl px-4 py-3 text-sm"
+                                        placeholder="you@example.com" name="email">
+                                    <button type="button" onclick="sendOtp()" id="otpBtn"
+                                        class="glass-input px-4 py-3 rounded-xl text-xs font-bold hover:bg-white/10 whitespace-nowrap transition-colors">Get
+                                        OTP</button>
+                                </div>
+                            </div>
+                            <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Company Name
+                                    (Optional)</label><input type="text"
+                                    class="glass-input w-full rounded-xl px-4 py-3 text-sm"
+                                    placeholder="Your Company Ltd." name="company"></div>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Email OTP
+                                </label><input type="tel" class="glass-input w-full rounded-xl px-4 py-3 text-sm"
+                                    placeholder="123456" id="emailOtp" required disabled name="otp">
+                            </div>
+                            <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Service
+                                    Interest</label><select name="service"
+                                    class="glass-input w-full rounded-xl px-4 py-3 text-sm" required>
+                                    <option class="bg-gray-900" value="" disabled selected>Select a service</option>
+                                    <option class="bg-gray-900" value="web">Web Development</option>
+                                    <option class="bg-gray-900" value="app">App Development</option>
+                                    <option class="bg-gray-900" value="design">Design Services</option>
+                                    <option class="bg-gray-900" value="seo">SEO</option>
+                                    <option class="bg-gray-900" value="hosting">Web Hosting</option>
+                                    <option class="bg-gray-900" value="cyber">Cybersecurity</option>
+                                    <option class="bg-gray-900" value="internship">Internship with us</option>
+                                    <option class="bg-gray-900" value="others">Others</option>
+                                </select></div>
+                        </div>
+                        <div class="space-y-2"><label class="text-xs font-bold text-gray-400 uppercase">Project
+                                Details</label><textarea
+                                class="glass-input w-full rounded-xl px-4 py-3 text-sm h-32 resize-none"
+                                placeholder="Tell us about your project..." name="project"></textarea></div>
+                        <div class="flex items-start gap-3 pt-2"><input type="checkbox" id="terms" required
+                                class="w-4 h-4 mt-1 rounded bg-white/10 border-white/20 text-purple-600 focus:ring-purple-500 focus:ring-offset-gray-900 cursor-pointer"><label
+                                for="terms" class="text-xs text-gray-400 cursor-pointer">I agree to Terms & Privacy
+                                Policy.</label></div>
+                        <button type="submit" id="submitBtn" disabled
+                            class="btn-glow w-full py-4 rounded-xl text-white font-bold shadow-lg transform transition hover:-translate-y-1">SEND
+                            MESSAGE</button>
+                    </form>
+
+                    <!-- Success Animation (Tick) -->
+                    <div id="successMessage"
+                        class="hidden opacity-0 text-center transition-opacity duration-500 ease-in-out py-8">
+                        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                            <circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none" />
+                            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                        </svg>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Thank You!</h3>
+
+                        <!-- Customer Support Notice -->
+                        <div class="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 mb-6 text-left">
+                            <h4 class="text-yellow-400 font-bold text-sm uppercase tracking-wider mb-2"><i
+                                    class="fas fa-info-circle mr-2"></i>Customer Support Notice</h4>
+                            <p class="text-gray-300 text-xs leading-relaxed">
+                                Our customer support mobile number may occasionally be busy or switched off due to
+                                reasonable operational issues. Please don’t panic — every email will be replied to
+                                within 4–5 business days, and we will also arrange a call back to assist you further.
+                            </p>
+                        </div>
+
+                        <div class="bg-white/5 rounded-2xl p-6 border border-white/10 text-left mb-8">
+                            <h4 class="text-sm font-bold text-purple-400 uppercase tracking-widest mb-4 text-center">
+                                Contact Details</h4>
+                            <div class="space-y-4 text-sm text-gray-300">
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-phone-alt mt-1 text-green-400"></i>
+                                    <div>
+                                        <span class="block text-xs text-gray-500 uppercase font-bold">Phone</span>
+                                        <p>9339474359, 95930 35680, 70292 28114</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start gap-3">
+                                    <i class="fas fa-envelope mt-1 text-blue-400"></i>
+                                    <div>
+                                        <span class="block text-xs text-gray-500 uppercase font-bold">Email</span>
+                                        <p>care@republicwing.com</p>
+                                        <p>wing-of-technology@republicwing.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button onclick="resetContactForm()"
+                            class="mt-4 px-8 py-3 rounded-full border border-white/20 hover:bg-white/10 text-sm transition-colors font-bold text-white">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative border-t border-white/5 bg-black/40 backdrop-blur-lg pt-12 md:pt-24 pb-12 overflow-hidden">
+        <div class="absolute top-10 -left-4 select-none pointer-events-none z-0">
+            <div class="flex flex-col leading-[0.8] font-black text-white shadow-text-anim"
+                style="font-family: 'Plus Jakarta Sans', sans-serif;"><span
+                    class="text-[4rem] md:text-[8.5rem] tracking-tighter">REPUBLIC</span><span
+                    class="text-[4rem] md:text-[8.5rem] tracking-tighter">WING</span></div>
+        </div>
+        <div class="container mx-auto px-6 relative z-10 reveal">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-2 lg:col-span-2">
+                    <h4 class="text-2xl font-bold mb-4">Republic Wing</h4>
+                    <p class="text-gray-400 text-sm max-w-xs mb-6">Complete Technology Services & Innovation Hub.</p>
+                    <div class="flex gap-4"><a href="#"
+                            class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-purple-600 transition-colors"><i
+                                class="fab fa-twitter"></i></a><a href="#"
+                            class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-blue-600 transition-colors"><i
+                                class="fab fa-linkedin-in"></i></a><a href="#"
+                            class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-pink-600 transition-colors"><i
+                                class="fab fa-instagram"></i></a></div>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4 text-white">Services</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Web Development</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">App Development</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Digital Marketing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4 text-white">Company</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h5 class="font-bold mb-4 text-white">Legal</h5>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-purple-400 transition-colors">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center pt-8 border-t border-white/5 text-xs text-gray-500">&copy; 2025 Republic Wing. All
+                rights reserved.</div>
+        </div>
+    </footer>
+
+    <script src="./script/script.js"></script>
+    <script src="./script/map.js"></script>
+</body>
+
+</html>
