@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us Section Component</title>
+    <!-- Tailwind CSS (Required for styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-100 p-2 sm:p-4">
+
+    <!-- COPY FROM HERE: About Us Section Start -->
+    <section class="bg-white rounded-xl sm:rounded-2xl shadow-sm overflow-hidden border border-gray-200 relative">
+        
+        <!-- Back to Site Option -->
+        <div class="absolute top-4 left-4 sm:top-6 sm:left-8 z-20">
+            <a href="/" class="inline-flex items-center px-3 py-2 bg-white/90 backdrop-blur-sm rounded-lg border border-gray-200 shadow-sm text-gray-600 hover:text-blue-600 hover:border-blue-200 transition-all duration-200 text-sm font-medium group">
+                <i class="fa-solid fa-arrow-left mr-2 group-hover:-translate-x-1 transition-transform"></i> 
+                <span class="hidden sm:inline">Back to Site</span>
+                <span class="sm:hidden">Back</span>
+            </a>
+        </div>
+
+        <!-- Main Intro Header -->
+        <div class="px-4 py-12 pt-20 md:px-12 md:py-16 text-center max-w-5xl mx-auto">
+            <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl mb-4">
+                About Republic Wing
+            </h2>
+            <p class="text-lg sm:text-xl text-blue-600 font-semibold mb-6">
+                Complete Technology Services & Innovation Hub
+            </p>
+            <p class="text-base sm:text-lg text-gray-600 leading-relaxed text-left sm:text-center">
+                Based in West Bengal, India, we operate with a singular mission: to provide clients the tools they need to <span class="font-bold text-gray-800">"dominate"</span> their industry. We function as a dynamic technology partner, bridging the gap between web development and future-ready smart products.
+            </p>
+        </div>
+
+        <!-- Corporate Profile Grid -->
+        <div class="bg-gray-50 border-y border-gray-100">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-200">
+                <!-- Leadership -->
+                <div class="p-6 sm:p-8 text-center flex flex-col items-center sm:block">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-blue-100 text-blue-600 mb-4">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Leadership</h3>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Owned by <strong>Arijit Manna</strong>.<br>
+                        Reg. Micro Enterprise (MSME).
+                    </p>
+                </div>
+                <!-- Establishment -->
+                <div class="p-6 sm:p-8 text-center flex flex-col items-center sm:block">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-purple-100 text-purple-600 mb-4">
+                        <i class="fa-solid fa-calendar-check"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Establishment</h3>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Ops Started: <strong>Jun 3, 2025</strong><br>
+                        Udyam Reg: <strong>Jun 20, 2025</strong>
+                    </p>
+                </div>
+                <!-- Location -->
+                <div class="p-6 sm:p-8 text-center flex flex-col items-center sm:block">
+                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-green-100 text-green-600 mb-4">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900">Headquarters</h3>
+                    <p class="mt-2 text-sm text-gray-600">
+                        Manna Food Centre, Diamond Harbour,<br>
+                        South 24 Parganas, WB.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mission Strip -->
+        <div class="bg-gray-900 text-white py-10 px-4 sm:py-12 sm:px-6 text-center relative overflow-hidden">
+            <div class="relative z-10 max-w-4xl mx-auto">
+                <h3 class="text-xs sm:text-sm font-bold uppercase tracking-widest text-blue-400 mb-2">Our Mission</h3>
+                <p class="text-2xl sm:text-3xl md:text-5xl font-black uppercase italic tracking-tight mb-4 leading-tight">
+                    "Ready to Dominate"
+                </p>
+                <p class="text-sm sm:text-base text-gray-300">
+                    We architect the future. Empowering businesses with custom websites, smart products, and cutting-edge tech.
+                </p>
+            </div>
+            <!-- Decorative Icon -->
+            <i class="fa-solid fa-chess-knight absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-800 text-8xl sm:text-9xl opacity-20 pointer-events-none"></i>
+        </div>
+
+        <!-- Operations & Advantage Grid -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-10 lg:py-16">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
+                
+                <!-- Left: What We Do -->
+                <div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                        <span class="w-1 h-8 bg-blue-600 mr-3 rounded-full"></span>
+                        What We Do
+                        <span class="ml-3 text-[10px] sm:text-xs font-normal text-gray-500 bg-gray-100 px-2 py-1 rounded-md whitespace-nowrap">Class 42 Reg.</span>
+                    </h3>
+                    <ul class="space-y-5">
+                        <li class="flex">
+                            <i class="fa-solid fa-code text-blue-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <strong class="block text-gray-800 text-sm sm:text-base">Core Development</strong>
+                                <span class="text-xs sm:text-sm text-gray-600">Software dev, image processing, website design & maintenance.</span>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa-solid fa-mobile-screen text-purple-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <strong class="block text-gray-800 text-sm sm:text-base">Web & App</strong>
+                                <span class="text-xs sm:text-sm text-gray-600">Custom PWAs and native mobile apps (iOS/Android).</span>
+                            </div>
+                        </li>
+                        <li class="flex">
+                            <i class="fa-solid fa-server text-green-500 mt-1 mr-3 flex-shrink-0"></i>
+                            <div>
+                                <strong class="block text-gray-800 text-sm sm:text-base">Specialized Services</strong>
+                                <span class="text-xs sm:text-sm text-gray-600">Web hosting (NIC 63112), Software support (NIC 62013).</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Right: The Republic Advantage -->
+                <div class="bg-blue-50 rounded-xl p-6 sm:p-8 border border-blue-100">
+                    <h3 class="text-lg sm:text-xl font-bold text-gray-900 mb-4">The Republic Advantage</h3>
+                    <p class="text-gray-600 mb-6 text-sm">Our client-first commitment separates us from the competition.</p>
+                    
+                    <div class="space-y-3">
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="fa-solid fa-shield-halved text-blue-600 mr-3 flex-shrink-0"></i>
+                            <span class="text-sm font-medium text-gray-800">Certified Elite Professionals</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="fa-solid fa-money-bill-wave text-green-600 mr-3 flex-shrink-0"></i>
+                            <span class="text-sm font-medium text-gray-800">Milestone-wise Payment Structure</span>
+                        </div>
+                        <div class="flex items-center bg-white p-3 rounded-lg shadow-sm">
+                            <i class="fa-solid fa-stopwatch text-red-500 mr-3 flex-shrink-0"></i>
+                            <span class="text-sm font-medium text-gray-800">Free Service on Delay Guarantee</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Future Innovation Footer -->
+            <div class="mt-10 sm:mt-12 pt-8 border-t border-gray-100 text-center">
+                <p class="text-xs sm:text-sm text-gray-500 uppercase tracking-wide font-semibold mb-4">Upcoming Innovation</p>
+                <div class="flex flex-wrap justify-center gap-2 sm:gap-4">
+                    <span class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 rounded-full text-xs sm:text-sm text-gray-700 font-medium border border-gray-200">Smart Hardware</span>
+                    <span class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 rounded-full text-xs sm:text-sm text-gray-700 font-medium border border-gray-200">Republic Chatting App</span>
+                    <span class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 rounded-full text-xs sm:text-sm text-gray-700 font-medium border border-gray-200">HULO Security</span>
+                    <span class="px-3 py-1.5 sm:px-4 sm:py-2 bg-gray-100 rounded-full text-xs sm:text-sm text-gray-700 font-medium border border-gray-200">Republic Cart</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Us Section End -->
+
+</body>
+</html>

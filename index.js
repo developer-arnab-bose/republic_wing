@@ -154,5 +154,21 @@ app.post("/review",
   }
 );
 
+app.get("/about", (req, res) => {
+  res.render("about");
+})
+app.get("/privacy", (req, res) => {
+  res.render("privacy");
+})
+app.get("/refund", (req, res) => {
+  res.render("refund");
+})
+app.get("/ship", (req, res) => {
+  res.render("ship");
+})
+app.get("/terms", (req, res) => {
+  res.render("terms");
+})
+
 console.log(`Listening on port ${process.env.PORT}`);
 app.listen(process.env.PORT);

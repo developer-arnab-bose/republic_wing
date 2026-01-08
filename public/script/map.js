@@ -3,7 +3,7 @@ let map;
 async function initMap() {
 
   // Request libraries when needed, not in the script tag.
-  const position = { lat: 22.1941510, lng: 88.1874130 };
+  const position = { lat: 22.263586100, lng: 88.320890600 };
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
   // Short namespaces can be used.
