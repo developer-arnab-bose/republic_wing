@@ -63,6 +63,9 @@ const auth = (rq, rs, next) => {
 app.get("/", (req, res) => {
   res.render("index");
 });
+app.get("/price", (req, res) => {
+  res.render("price");
+});
 
 app.post("/otpGen",
   body('email').trim().isEmail().isLength({ min: 3 }),
